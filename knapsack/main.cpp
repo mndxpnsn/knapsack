@@ -100,7 +100,7 @@ int main(int argc, char* argv[]) {
         arr.push_back(val);
     }
     
-    //Check if target sum can be obtained from elements in A and return array solution
+    //Compute max sum 
     int max_sum = unbounded_knapsack(k, arr);
 
     //Print results
