@@ -43,7 +43,7 @@ int can_sum(int n, std::vector<int>& arr, int target_sum, int sum, t_elem** m_ta
                         max_val = target_sum;
                         return target_sum;
                     }
-                    if(sum_loc > sum_o && sum_loc <= target_sum) {
+                    if(sum_loc > max_val && sum_loc <= target_sum) {
                         max_val = sum_loc;
                     }
                 }
