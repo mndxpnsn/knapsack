@@ -43,13 +43,14 @@ int can_sum(int n, std::vector<int>& arr, int target_sum, int sum, t_elem** m_ta
                         max_val = target_sum;
                         return target_sum;
                     }
-                    if(sum_loc > max_val && sum_loc <= target_sum) {
-                        max_val = sum_loc;
-                    }
+                }
+                
+                if(sum_loc > max_val && sum_loc <= target_sum) {
+                    max_val = sum_loc;
                 }
             }
             
-            if(max_val < sum_o && max_val <= target_sum && sum_o <= target_sum) {
+            if(max_val < sum_o && sum_o <= target_sum) {
                 max_val = sum_o;
             }
         }
@@ -88,12 +89,12 @@ int unbounded_knapsack(int k, std::vector<int>& arr) {
 
 int main(int argc, char* argv[]) {
 
-    int n = 10; //Number of elements in array
-    int k = 12; //Upper bound
+    int n = 3; //Number of elements in array
+    int k = 119; //Upper bound
 
     std::vector<int> arr;
     
-    //Seed random number generator
+    //Create input random array
     srand((unsigned) time(NULL));
     for(int i = 0; i < n; ++i) {
         int val = rand() % k + 1;
